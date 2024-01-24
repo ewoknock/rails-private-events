@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.navbar ul{
+    display: flex;
+    padding: .8rem .8rem;
+    margin-left: .8rem;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.logo{
+    color: #f3775f;
+}
+
+.navbar-right{
+    gap: 1rem;
+}
+
+.nav-button{
+    color: black;
+    padding: 10px 16px;
+    border-radius: 100px;
+
+}
+
+.nav-button:hover{
+    background-color: #f8f6f6ed;
+}

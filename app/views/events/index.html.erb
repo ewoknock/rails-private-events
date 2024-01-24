@@ -1,0 +1,13 @@
+<h1>Private-Events</h1>
+
+<ul>
+    <% @events.each do |event| %>
+        <li>
+            <%= event.title %>
+        </li>
+        <li> <%= event.description %> </li>
+        <li> <%= event.date_time %> </li>
+        <li> <%= event.location %> </li>
+    <% end %>
+</ul>
+

@@ -18,7 +18,7 @@
         <ul class="navbar-right">
           <li><%= link_to "Create Event", new_event_path, class: "nav-button"%></li>
           <% if user_signed_in? %>
-            <li><%= link_to "Account", user_path, class: "nav-button" %></li>
+            <%# <li><%= link_to "Account", user_path, class: "nav-button" %><%#</li>%> 
             <li><%= link_to "Log Out", destroy_user_session_path, class: "nav-button"%>
           <% else %>
             <li><%= link_to "Log In", new_user_session_path, class: "nav-button"%></li>
@@ -38,7 +38,7 @@
         <% flash[:error] %>
       </div>
     <% end %>
-    
+
     <div class="main-container">
       <%= yield %>
     </div>

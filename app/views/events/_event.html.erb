@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-content">
+        <h2><%= event.title %></h2>
+        <div class="card-header">
+            <p>Hosted by: <%= event.creator.username %></p>
+            <div>Invitees</div>
+            <div>Attendees</div>
+        </div>
+        <p> <%= event.description %>
+        <div class="card-location">
+            <div><%= event.location %></div>
+            <div><%= event.date_time %></div>
+        </div>
+    </div>
+</div>

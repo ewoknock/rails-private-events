@@ -19,7 +19,7 @@
           <li><%= link_to "Create Event", new_event_path, class: "nav-button"%></li>
           <% if user_signed_in? %>
             <%# <li><%= link_to "Account", user_path, class: "nav-button" %><%#</li>%> 
-            <li><%= link_to "Log Out", destroy_user_session_path, class: "nav-button"%>
+            <li><%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-button"%>
           <% else %>
             <li><%= link_to "Log In", new_user_session_path, class: "nav-button"%></li>
             <li><%= link_to "Sign Up", new_user_registration_path, class: "nav-button"%></li>

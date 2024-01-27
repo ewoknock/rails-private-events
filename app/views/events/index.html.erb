@@ -1,6 +1,18 @@
-<h1>Private-Events</h1>
+<div class="upcoming-events">
+    <h2>Upcoming Events</h2>
+    <div class="card-container">
+        <% @events.upcoming.each do |event| %>
+            <%= render event %>
+        <% end %>
+    </div>
+</div>
 
-<div class="card-container">
-    <%= render @events %>
+<div class="past-events">
+    <h2>Past Events</h2>
+    <div class="card-container">
+        <% @events.past.each do |event| %>
+            <%= render event %>
+        <% end %>    
+    </div>
 </div>
 

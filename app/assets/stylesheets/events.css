@@ -1,3 +1,8 @@
+.events-container{
+    padding: 1.6rem;
+}
+
+
 .card-container{
     display: flex;
     gap: 2rem;
@@ -7,22 +12,34 @@
 
 .card{
     border: 1px solid #eee;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0, 0.06);
     display: flex;
     flex: 0 0 300px;
+    max-height: 400px;;
 }
 
 .card-content{
     display: flex;
-
     flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
     justify-content: space-between;
-    gap: 1rem;
+    gap: .5rem;
+}
+
+.card-description{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 75px;
 }
 
 .card-header,
 .card-location{
     display: flex;
+    justify-content: space-between;
+    height: 2rem;
 }

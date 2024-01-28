@@ -7,6 +7,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.includes(:attendees).find(params[:id])
+    
+    attendees = @event.attendees.map(&:id)
+    @current_user_attending = attendees.include?(current_user.id) ? true : false
   end
 
   def new

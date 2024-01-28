@@ -1,0 +1,17 @@
+<div class="events-container">
+    <h2><%= @event.title %></h2>
+    <p>Host: <%= @event.creator.username %></p>
+    <p>Description: <%= @event.description %></p>
+    <p>Location: <%= @event.location %></p>
+    <p>Date & time: <%= @event.date_time %></p>
+    <% if user_signed_in? %>
+        <% if @current_user_attending %>
+            <% "Do Not Attend" %>
+        <% else %>
+            <%= link_to "Attend", event_attendees_path(event_attendee: {attended_event_id: @event.id, event_attendee_id: current_user.id}), data: {turbo_method: "post"} %>
+        <% end %>
+    <% else %>
+        Log in to attend.
+    <% end %>
+        
+</div>

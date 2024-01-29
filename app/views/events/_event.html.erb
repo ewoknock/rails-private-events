@@ -1,5 +1,4 @@
-<%= link_to event_path(event), :action => 'go' do %>
-<div class="card">
+<%= link_to event_path(event), :action => 'go', class: "card" do %>
     <div class="card-content">
         <h2><%= event.title %></h2>
         <div class="card-header">
@@ -13,6 +12,5 @@
             <div><%= event.date_time %></div>
         </div>
     </div>
-</div>
 <% end %>
 

@@ -13,5 +13,14 @@
     <% else %>
         Log in to attend.
     <% end %>
-        
+    <p>Attendees (<%= @event.attendees.length %>): </p>
+    <ul>
+        <% if user_signed_in? %>
+            <% @event.attendees.each do |attendee| %>
+                <li><%= attendee.username %></li>
+            <% end %>
+        <% else %>
+            <li>Log in to see the attendees.</li>
+        <% end %>
+    </ul>
 </div>
